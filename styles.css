@@ -1,1 +1,102 @@
 /*  your css code here. If applicable */
+body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5f5; /* body-background-color */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styling */
+        .header {
+            background-color: #011e29; /* header-background-color */
+            color: white;
+            padding: 20px 0;
+            text-align: center; /* Center alignment */
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        /* Main Content Layout (Flexbox) */
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align items to the top */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px; /* Responsive padding */
+            gap: 20px;
+        }
+
+        /* Card Styling (applied to all three columns) */
+        .card {
+            background-color: #ffffff; /* White background for the card sections */
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px; /* Space between rows/cards */
+        }
+
+        /* Specific Section Widths */
+        .latest-news-section {
+            flex: 0 0 25%; /* Fixed width for left column */
+            min-width: 200px;
+        }
+
+        .main-article-section {
+            flex: 1; /* Takes up remaining space in the center */
+        }
+
+        .pictorial-news-section {
+            flex: 0 0 25%; /* Fixed width for right column */
+            min-width: 200px;
+        }
+
+        /* Latest News Styling */
+        .latest-news-section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .latest-news-section li {
+            margin-bottom: 10px;
+        }
+        
+        /* Pictorial News Styling */
+        .pictorial-news-section {
+             /* Re-apply border-radius and padding */
+             text-align: center; /* Center content (specifically the images/heading) */
+        }
+
+        .pictorial-news-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            object-fit: cover; /* Ensures images cover the area without distortion */
+        }
+
+        /* Headings */
+        h2, h3 {
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        /* Responsive Breakpoint for Mobile/Tablet */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column; /* Stack columns vertically on smaller screens */
+                align-items: stretch; /* Make items take full width */
+                gap: 10px;
+            }
+
+            .latest-news-section,
+            .pictorial-news-section {
+                flex: 1 1 100%; /* Take full width on mobile */
+            }
+        }
